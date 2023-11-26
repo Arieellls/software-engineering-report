@@ -1,0 +1,21 @@
+{
+  "name": "software-engineering-reporting-presentation",
+  "version": "1.0.0",
+  "description": "Recipe Application",
+  "main": "index.html",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "author": "Arielito Manorina",
+  "license": "ISC",
+  "dependencies": {
+    "core-js": "^3.33.2",
+    "fractional": "^1.0.0",
+    "fracty": "^1.0.11",
+    "img": "^3.0.3",
+    "install": "^0.13.0",
+    "mathjs": "^12.1.0",
+    "regenerator-runtime": "^0.14.0"
+  }
+}
