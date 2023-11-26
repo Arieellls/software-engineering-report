@@ -24,13 +24,18 @@
     "core-js": "^3.33.2",
     "fractional": "^1.0.0",
     "mathjs": "^12.1.0",
-    "regenerator-runtime": "^0.14.0",
-    "parcel": "^2.0.0"
+    "parcel": "^2.0.0",
+    "regenerator-runtime": "^0.14.0"
   },
   "browser": {
     "fracty": "./node_modules/fracty/fracty.js"
   },
   "babel": {
-    "presets": ["@babel/preset-env"]
+    "presets": [
+      "@babel/preset-env"
+    ]
+  },
+  "devDependencies": {
+    "parcel": "^2.10.3"
   }
 }
