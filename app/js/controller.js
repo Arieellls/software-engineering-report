@@ -1,11 +1,11 @@
-import { async } from 'regenerator-runtime';
+// import { async } from 'regenerator-runtime/runtime';
 import * as model from './model';
 import recipeView from './views/recipeViews';
 import recipeViews from './views/recipeViews';
 
 import 'core-js/stable';
-import 'regenerator-runtime/runtime';
-import { lgamma, mode } from 'mathjs';
+// import 'regenerator-runtime/runtime';
+// import { lgamma, mode } from 'mathjs';
 import resultsView from './views/resultsView';
 import searchView from './views/searchView';
 import paginationView from './views/paginationView';
