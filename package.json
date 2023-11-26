@@ -16,7 +16,8 @@
     "img": "^3.0.3",
     "install": "^0.13.0",
     "mathjs": "^12.1.0",
-    "regenerator-runtime": "^0.14.0"
+    "regenerator-runtime": "^0.14.0",
+    "parcel": "^2.0.0"
   },
   "engines": {
     "node": ">=12.0.0"
