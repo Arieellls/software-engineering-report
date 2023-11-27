@@ -2072,121 +2072,7 @@ class RecipeView extends (0, _viewDefault.default) {
 }
 exports.default = new RecipeView();
 
-},{"./view":"b1JNv","../../images/icons.svg":"goifa","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","fracty":"hJO4d"}],"b1JNv":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _iconsSvg = require("../../images/icons.svg");
-var _iconsSvgDefault = parcelHelpers.interopDefault(_iconsSvg);
-var _recipeViews = require("./recipeViews");
-var _recipeViewsDefault = parcelHelpers.interopDefault(_recipeViews);
-class View {
-    _data;
-    _parentWrapper = document.querySelector(".recipe-wrapper__right");
-    render(data) {
-        if (!data || Array.isArray(data) && data.length === 0) return this.renderError();
-        console.log("ha????");
-        this._data = data;
-        const markup = this._generateMarkup();
-        this._clear();
-        this._parentElement.insertAdjacentHTML("afterbegin", markup);
-        const recipeImage = (0, _recipeViewsDefault.default)._generateRecipeImage();
-        // if(!recipeImage) return;
-        this._parentWrapper.insertAdjacentHTML("afterbegin", recipeImage);
-    }
-    _clear() {
-        if (this._parentElement) this._parentElement.innerHTML = "";
-    }
-    renderSpinner = function() {
-        const markup = `
-        <div class="spinner">
-          <svg>
-            <use href="${(0, _iconsSvgDefault.default)}#icon-loader"></use>
-          </svg>
-          <p>Fetching...</p>
-        </div>
-      `;
-        this._parentElement.innerHTML = "";
-        this._parentElement.insertAdjacentHTML("afterbegin", markup);
-    };
-    renderError(message = this._errorMessage) {
-        const markup = `
-        <div class="error">
-          <div>
-            <svg>
-              <use href="${(0, _iconsSvgDefault.default)}#icon-alert-triangle"></use>
-            </svg>
-          </div>
-          <p>${message}</p>
-        </div>
-        `;
-        this._clear();
-        this._parentElement.insertAdjacentHTML("afterbegin", markup);
-    }
-    renderMessage(message = this._message) {
-        const markup = `
-        <div class="message">
-          <div>
-            <svg>
-              <use href="${(0, _iconsSvgDefault.default)}#icon-smile"></use>
-            </svg>
-          </div>
-          <p>${message}</p>
-        </div>
-        `;
-        this._clear();
-        this._parentElement.insertAdjacentHTML("afterbegin", markup);
-    }
-    regenerateRepoterTitle() {
-        return `
-          <div class="headline">
-            <div class="group-reporter">
-              <h1>Architectural Design: Real World Project Presentation<br><span>Chapter 13 | BSCS 3B</span></h1>
-            </div>
-          </div>
-        `;
-    }
-}
-exports.default = View;
-
-},{"../../images/icons.svg":"goifa","./recipeViews":"bbYBR","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"goifa":[function(require,module,exports) {
-module.exports = require("a0242a5b64f18c4a").getBundleURL("1ZkVA") + "icons.921f6366.svg" + "?" + Date.now();
-
-},{"a0242a5b64f18c4a":"lgJ39"}],"lgJ39":[function(require,module,exports) {
-"use strict";
-var bundleURL = {};
-function getBundleURLCached(id) {
-    var value = bundleURL[id];
-    if (!value) {
-        value = getBundleURL();
-        bundleURL[id] = value;
-    }
-    return value;
-}
-function getBundleURL() {
-    try {
-        throw new Error();
-    } catch (err) {
-        var matches = ("" + err.stack).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^)\n]+/g);
-        if (matches) // The first two stack frames will be this function and getBundleURLCached.
-        // Use the 3rd one, which will be a runtime in the original bundle.
-        return getBaseURL(matches[2]);
-    }
-    return "/";
-}
-function getBaseURL(url) {
-    return ("" + url).replace(/^((?:https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/.+)\/[^/]+$/, "$1") + "/";
-}
-// TODO: Replace uses with `new URL(url).origin` when ie11 is no longer supported.
-function getOrigin(url) {
-    var matches = ("" + url).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^/]+/);
-    if (!matches) throw new Error("Origin not found");
-    return matches[0];
-}
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-exports.getOrigin = getOrigin;
-
-},{}],"hJO4d":[function(require,module,exports) {
+},{"fracty":"hJO4d","./view":"b1JNv","../../images/icons.svg":"goifa","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"hJO4d":[function(require,module,exports) {
 // FRACTY CONVERTS DECIMAL NUMBERS TO FRACTIONS BY ASSUMING THAT TRAILING PATTERNS FROM 10^-2 CONTINUE TO REPEAT
 // The assumption is based on the most standard numbering conventions
 // e.g. 3.51 will convert to 3 51/100 while 3.511 will convert to 3 23/45
@@ -2280,6 +2166,120 @@ function returnStrings(den, num, integer, type) {
     else if (integer == "0") return `${type}${num}/${den}`;
     else return `${type}${integer} ${num}/${den}`; //If there's an integer and a fraction return both.
 }
+
+},{}],"b1JNv":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _iconsSvg = require("../../images/icons.svg");
+var _iconsSvgDefault = parcelHelpers.interopDefault(_iconsSvg);
+var _recipeViews = require("./recipeViews");
+var _recipeViewsDefault = parcelHelpers.interopDefault(_recipeViews);
+class View {
+    _data;
+    _parentWrapper = document.querySelector(".recipe-wrapper__right");
+    render(data) {
+        if (!data || Array.isArray(data) && data.length === 0) return this.renderError();
+        console.log("ha????");
+        this._data = data;
+        const markup = this._generateMarkup();
+        this._clear();
+        this._parentElement.insertAdjacentHTML("afterbegin", markup);
+        const recipeImage = (0, _recipeViewsDefault.default)._generateRecipeImage();
+        // if(!recipeImage) return;
+        this._parentWrapper.insertAdjacentHTML("afterbegin", recipeImage);
+    }
+    _clear() {
+        if (this._parentElement) this._parentElement.innerHTML = "";
+    }
+    renderSpinner = function() {
+        const markup = `
+        <div class="spinner">
+          <svg>
+            <use href="${(0, _iconsSvgDefault.default)}#icon-loader"></use>
+          </svg>
+          <p>Loading...</p>
+        </div>
+      `;
+        this._parentElement.innerHTML = "";
+        this._parentElement.insertAdjacentHTML("afterbegin", markup);
+    };
+    renderError(message = this._errorMessage) {
+        const markup = `
+        <div class="error">
+          <div>
+            <svg>
+              <use href="${(0, _iconsSvgDefault.default)}#icon-alert-triangle"></use>
+            </svg>
+          </div>
+          <p>${message}</p>
+        </div>
+        `;
+        this._clear();
+        this._parentElement.insertAdjacentHTML("afterbegin", markup);
+    }
+    renderMessage(message = this._message) {
+        const markup = `
+        <div class="message">
+          <div>
+            <svg>
+              <use href="${(0, _iconsSvgDefault.default)}#icon-smile"></use>
+            </svg>
+          </div>
+          <p>${message}</p>
+        </div>
+        `;
+        this._clear();
+        this._parentElement.insertAdjacentHTML("afterbegin", markup);
+    }
+    regenerateRepoterTitle() {
+        return `
+          <div class="headline">
+            <div class="group-reporter">
+              <h1>Architectural Design: Real World Project Presentation<br><span>Chapter 13 | BSCS 3B</span></h1>
+            </div>
+          </div>
+        `;
+    }
+}
+exports.default = View;
+
+},{"../../images/icons.svg":"goifa","./recipeViews":"bbYBR","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"goifa":[function(require,module,exports) {
+module.exports = require("a0242a5b64f18c4a").getBundleURL("1ZkVA") + "icons.921f6366.svg" + "?" + Date.now();
+
+},{"a0242a5b64f18c4a":"lgJ39"}],"lgJ39":[function(require,module,exports) {
+"use strict";
+var bundleURL = {};
+function getBundleURLCached(id) {
+    var value = bundleURL[id];
+    if (!value) {
+        value = getBundleURL();
+        bundleURL[id] = value;
+    }
+    return value;
+}
+function getBundleURL() {
+    try {
+        throw new Error();
+    } catch (err) {
+        var matches = ("" + err.stack).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^)\n]+/g);
+        if (matches) // The first two stack frames will be this function and getBundleURLCached.
+        // Use the 3rd one, which will be a runtime in the original bundle.
+        return getBaseURL(matches[2]);
+    }
+    return "/";
+}
+function getBaseURL(url) {
+    return ("" + url).replace(/^((?:https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/.+)\/[^/]+$/, "$1") + "/";
+}
+// TODO: Replace uses with `new URL(url).origin` when ie11 is no longer supported.
+function getOrigin(url) {
+    var matches = ("" + url).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^/]+/);
+    if (!matches) throw new Error("Origin not found");
+    return matches[0];
+}
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+exports.getOrigin = getOrigin;
 
 },{}],"7YLJP":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");

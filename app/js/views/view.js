@@ -31,7 +31,7 @@ export default class View {
           <svg>
             <use href="${icons}#icon-loader"></use>
           </svg>
-          <p>Fetching...</p>
+          <p>Loading...</p>
         </div>
       `;
     
