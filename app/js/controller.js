@@ -1,4 +1,4 @@
-import { async } from 'regenerator-runtime/runtime';
+// import { async } from 'regenerator-runtime/runtime';
 import * as model from './model';
 import recipeView from './views/recipeViews';
 import recipeViews from './views/recipeViews';
