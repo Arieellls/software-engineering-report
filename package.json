@@ -6,7 +6,7 @@
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html --dist-dir app/dist",
-    "publish": "gh-pages -d app/dist"
+    "publish": "gh-pages -d ./dist"
   },
   "author": "Arielito Manorina",
   "license": "ISC",
