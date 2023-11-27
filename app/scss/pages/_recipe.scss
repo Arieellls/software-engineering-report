@@ -124,8 +124,9 @@
               text-transform: uppercase;
               color: #dfd6c1;
               background-color: #4f6f52c5; /* Replace with your desired background color */
-              padding: auto 1.25rem;
               border-bottom: .125rem solid #86b585;
+              padding: 4px;
+              padding-left: 15px;
           }
           
           h2::after {

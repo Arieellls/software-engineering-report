@@ -160,8 +160,9 @@ a:active {
   text-transform: uppercase;
   color: #dfd6c1;
   background-color: rgba(79, 111, 82, 0.7725490196); /* Replace with your desired background color */
-  padding: auto 1.25rem;
   border-bottom: 0.125rem solid #86b585;
+  padding: 4px;
+  padding-left: 15px;
 }
 .recipe-wrapper__right .recipe-image h2::after {
   content: "";

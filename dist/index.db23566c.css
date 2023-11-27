@@ -157,7 +157,7 @@ a, a:visited, a:active {
   border-bottom: .125rem solid #86b585;
   width: -moz-fit-content;
   width: fit-content;
-  padding: auto 1.25rem;
+  padding: 4px 4px 4px 15px;
   font-size: 1em;
   position: relative;
   top: 10px;
