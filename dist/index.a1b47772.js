@@ -2019,8 +2019,8 @@ const getJSON = async function(url) {
 // import {Fraction} from 'fractional';
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-var _ = require("fracty/");
-var _Default = parcelHelpers.interopDefault(_);
+var _fracty = require("fracty");
+var _fractyDefault = parcelHelpers.interopDefault(_fracty);
 var _view = require("./view");
 var _viewDefault = parcelHelpers.interopDefault(_view);
 var _iconsSvg = require("../../images/icons.svg");
@@ -2052,7 +2052,7 @@ class RecipeView extends (0, _viewDefault.default) {
             <svg class="recipe__icon">
                 <use href="${0, _iconsSvgDefault.default}#icon-check"></use>
             </svg>
-            <div class="recipe__quantity">${ing.quantity ? (0, _Default.default)(ing.quantity) : ""}</div>
+            <div class="recipe__quantity">${ing.quantity ? (0, _fractyDefault.default)(ing.quantity) : ""}</div>
             <div class="recipe__description">
                 <span class="recipe__unit">${ing.unit}</span>
                 ${ing.description}
@@ -2072,7 +2072,7 @@ class RecipeView extends (0, _viewDefault.default) {
 }
 exports.default = new RecipeView();
 
-},{"./view":"b1JNv","../../images/icons.svg":"goifa","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","fracty/":"hJO4d"}],"b1JNv":[function(require,module,exports) {
+},{"./view":"b1JNv","../../images/icons.svg":"goifa","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","fracty":"hJO4d"}],"b1JNv":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _iconsSvg = require("../../images/icons.svg");

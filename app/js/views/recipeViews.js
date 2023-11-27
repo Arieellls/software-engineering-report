@@ -2,7 +2,7 @@
 // console.log("Hereeeeeeeeeeeeeeeeeeeeeeeee" + Fraction);
 // import { fraction } from 'mathjs';
 // import {Fraction} from 'fractional';
-import fracty from 'fracty/';
+import fracty from 'fracty';
 import View from './view';
 
 import icons from '../../images/icons.svg';
